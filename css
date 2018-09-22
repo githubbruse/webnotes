@@ -1,0 +1,11 @@
+1.【嵌入式】
+  在<head></head>中添加
+  <style type="text/css">
+  span{
+  color:red;
+  }
+  </style>
+
+2.【外部式】
+在<head></head>中添加
+<link href="base.css" rel="stylesheet" type="text/css" />
