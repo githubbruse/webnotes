@@ -401,3 +401,59 @@ div{
   
 ### （1）流动模型
   
+流动（Flow）是默认的网页布局模式  
+  
+流动布局模型具有2个比较典型的特征：  
+  
+第一点，**块状元素**都会在所处的包含元素内**自上而下**按顺序垂直延伸分布，因为在默认状态下，块状元素的宽度都为100%。实际上，块状元素都会以行的形式占据位置。    
+  
+第二点，在流动模型下，**内联元素**都会在所处的包含元素内**从左到右**水平分布显示。（内联元素可不像块状元素这么霸道独占一行） 
+  
+### （2）浮动模型
+  
+任何元素在默认情况下是不能浮动的，但可以用 CSS 定义为浮动，如 div、p、table、img 等元素都可以被定义为浮动。如下代码可以实现两个 div 元素一行显示。  
+  
+```
+div{
+    width:200px;
+    height:200px;
+    border:2px red solid;
+    float:left;
+}
+<div id="div1"></div>
+<div id="div2"></div>
+```
+  
+效果：  
+  
+![3](http://img.mukewang.com/540e62c60001c56a06760417.jpg)  
+  
+当然你也可以同时设置两个元素右浮动也可以实现一行显示。  
+  
+```
+div{
+    width:200px;
+    height:200px;
+    border:2px red solid;
+    float:right;
+}
+```
+  
+![4](http://img.mukewang.com/540e632b0001f5f506760417.jpg)  
+  
+一左一右  
+  
+```
+div{
+    width:200px;
+    height:200px;
+    border:2px red solid;
+}
+#div1{float:left;}
+#div2{float:right;}
+```
+  
+### (3)层模型
+  
+### 1°绝对定位
+  
