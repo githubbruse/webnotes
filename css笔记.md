@@ -283,4 +283,106 @@ border-color:#888;//前面的井号不要忘掉。
 
 thin | medium | thick（但不是很常用），最常还是用象素（px）。  
   
+### (6)盒模型--边框（二）
+  
+css 样式中允许只为一个方向的边框设置样式：  
+  
+`div{border-bottom:1px solid red;}`  
+  
+同样可以使用下面代码实现其它三边(上、右、左)边框的设置：  
+  
+`border-top:1px solid red;`  
+`border-right:1px solid red; `  
+`border-left:1px solid red;`  
+  
+### (7)盒模型--宽度和高度
+  
+盒模型宽度和高度和我们平常所说的物体的宽度和高度理解是不一样的，css内定义的宽（width）和高（height），指的是填充以里的**内容范围**。  
+  
+因此一个元素实际宽度（盒子的宽度）=左边界+左边框+左填充+内容宽度+右填充+右边框+右边界。  
+  
+![1](http://img.mukewang.com/539fbb3a0001304305570259.jpg)  
+  
+元素的高度也是同理。  
+  
+比如：  
+  
+css代码：  
+  
+```
+div{
+    width:200px;
+    padding:20px;
+    border:1px solid red;
+    margin:10px;    
+}
+```
+  
+html代码：  
+  
+```
+<body>
+   <div>文本内容</div>
+</body>
+```
+  
+元素的实际长度为：10px+1px+20px+200px+20px+1px+10px=262px。在chrome浏览器下可查看元素盒模型，如下图：  
+  
+![2](http://img.mukewang.com/543b4cae0001b34304300350.jpg)  
+  
+### (8)盒模型--填充
+  
+元素内容与边框之间是可以设置距离的，称之为“填充”。填充也可分为上、右、下、左(顺时针)。如下代码：  
+  
+`div{padding:20px 10px 15px 30px;}`  
+  
+顺序一定不要搞混。可以分开写上面代码：  
+  
+```
+div{
+   padding-top:20px;
+   padding-right:10px;
+   padding-bottom:15px;
+   padding-left:30px;
+}
+```
+  
+如果上、右、下、左的填充都为10px;可以这么写:  
+  
+`div{padding:10px;}`  
+  
+如果上下填充一样为10px，左右一样为20px，可以这么写：  
+  
+`div{padding:10px 20px;}`  
+  
+### (9)盒模型--边界
+  
+元素与其它元素之间的距离可以使用边界（margin）来设置。边界也是可分为上、右、下、左。如下代码：  
+  
+`div{margin:20px 10px 15px 30px;}`  
+  
+也可以分开写：  
+  
+```
+div{
+   margin-top:20px;
+   margin-right:10px;
+   margin-bottom:15px;
+   margin-left:30px;
+}
+```
+  
+如果上右下左的边界都为10px;可以这么写：  
+  
+`div{ margin:10px;}`  
+  
+如果上下边界一样为10px，左右一样为20px，可以这么写  
+  
+`div{ margin:10px 20px;}`  
+  
+*总结一下：padding和margin的区别，padding在边框里，margin在边框外。*  
+  
+## 六、CSS布局模型
+  
+### （1）流动模型
   
