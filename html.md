@@ -169,9 +169,12 @@
 </table>
 ```
 
-* 【`<a>`标签】  
+* 【`<a>`标签】    
 `<a  href="目标网址"  title="鼠标滑过显示的文本">链接显示的文本</a>`  
-新窗口中打开 target="_blank"  
+新窗口中打开 target="_blank"    
+
+`<a>`标签还有一个作用是可以链接Email地址，使用mailto能让访问者便捷向网站管理者发送电子邮件。    
+![1](http://img.mukewang.com/52da4f2a000150b714280550.jpg)  
 
 * 【插入图片】  
 `<img src="图片地址" alt="下载失败时的替换文本" title = "提示文本">`  
