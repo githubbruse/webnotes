@@ -1,5 +1,7 @@
 # html笔记
-* 【基本结构】  
+  
+## 一、标签（第一部分）
+### （1）基本结构    
 ```
 <html>   
     <head>...</head>       
@@ -7,21 +9,21 @@
 </html>    
 ```
 
-* 【注释】  
+### （2）注释   
 `<!--注释文字-->`  
 
-* 【p标签】  
+### （3）p标签   
 `<p>段落文本</p>`  
 
-* 【h标签】  
+### （4）h标签    
 `<h1>标题文本</h1>`  
 (h1~h6)  
 
-* 【强调语气】  
+### （5）强调语气    
 `<em>需要强调的文本</em>` （斜体）  
 `<strong>需要强调的文本</strong>` （加粗）  
 
-* 【<span>标签】  
+### （6）`<span>`标签      
 为文字设置单独样式  
 `<span>文本</span>`  
 在head中加入:  
@@ -33,29 +35,30 @@
   </style>  
   ```
 
-* 【`<q>`标签，短文本引用】  
+### （7）`<q>`标签，短文本引用    
 `<q>引用文本</q>` (效果：自动添加双引号）  
 
-* 【`<blockquote>`标签】 长文本引用  
+### （8）`<blockquote>`标签 长文本引用    
 `<blockquote>引用文本</blockquote>` （引用文本左右两侧有缩进）  
 
-* 【`<br>`或`<br />`标签】   
-    分行显示文本    
+### （9）`<br>`或`<br />`标签     
+分行显示文本  
 
-* 【`&nbsp;`】  
-    空格    
+### （10）`&nbsp;`  
+空格     
 
-* 【`<hr>`或`<hr />`标签】   
-    添加水平横线    
+### （11）`<hr>`或`<hr />`标签     
+添加水平线  
 
-* 【`<address>`添加地址】  
+### （12）`<address>`添加地址    
 `<address>联系地址信息</address>` （斜体）  
 
-* 【添加代码】  
+### （13）添加代码    
 `<code>代码语言</code>`  
 `<pre>语言代码段</pre>`  
 
-* 【列表】  
+## 二、标签（第二部分）
+### （1）列表    
 
 （1）ul 无序列表   
 ```
@@ -87,7 +90,7 @@
    ......    
 </ol>   
 
-* 【表格】   
+### （2）表格     
 
 `<table>…</table>`：整个表格以`<table>`标记开始、`</table>`标记结束。  
 
@@ -155,10 +158,10 @@
   </tbody>
 </table>
 
-（1）摘要    
+#### 1° 摘要    
 `<table summary="表格简介文本">` 浏览器中不显示  
 
-（2）标题    
+#### 2° 标题    
 ```
 <table>
     <caption>标题文本</caption>
@@ -171,25 +174,27 @@
 </table>
 ```
 
-* 【`<a>`标签】    
+## 三、标签（第三部分）
+### （1）`<a>`标签    
 `<a  href="目标网址"  title="鼠标滑过显示的文本">链接显示的文本</a>`  
 新窗口中打开 target="_blank"    
-
+  
+### （2）mailto
 `<a>`标签还有一个作用是可以链接Email地址，使用mailto能让访问者便捷向网站管理者发送电子邮件。    
 ![1](http://img.mukewang.com/52da4f2a000150b714280550.jpg)  
 #注意：如果mailto后面同时有多个参数的话，第一个参数必须以“?”开头，后面的参数每一个都以“&”分隔。  
 
-* 【插入图片】  
+### （3）插入图片  
 `<img src="图片地址" alt="下载失败时的替换文本" title = "提示文本">`  
 
-* 【表单】  
+## 四、表单  
 `<form   method="传送方式"   action="服务器文件">`  
 
 `<form> `：`<form>`标签是成对出现的，以`<form>`开始，以`</form>`结束。  
 action ：浏览者输入的数据被传送到的地方,比如一个PHP页面(save.php)。  
 method ： 数据传送的方式（get/post)，get在网址后方显示提交内容，post不显示  
 
-（1）文本/密码输入框    
+### （1）文本/密码输入框    
 ```
 <form>
    <input type="text/password" name="名称" value="文本" />
@@ -206,7 +211,7 @@ method ： 数据传送的方式（get/post)，get在网址后方显示提交内
 </form>
 ```
 
-（2）文本域    
+### （2）文本域    
 `<textarea  rows="行数" cols="列数">文本</textarea>`  
 
 ```
@@ -216,7 +221,7 @@ method ： 数据传送的方式（get/post)，get在网址后方显示提交内
 </form>
 ```
 
-（3）单选框/复选框    
+### （3）单选框/复选框    
 `<input   type="radio/checkbox"   value="值"    name="名称"   checked="checked"/>`
 
 type:  
@@ -227,7 +232,7 @@ name：为控件命名，以备后台程序 ASP、PHP 使用
 checked：当设置 checked="checked" 时，该选项被默认选中  
  *注意！同一组的单选按钮，name 取值一定要一致  
 
-（4）下拉列表    
+### （4）下拉列表    
 ```
 <form action="save.php" method="post" >
     <label>爱好:</label>
@@ -243,18 +248,18 @@ checked：当设置 checked="checked" 时，该选项被默认选中
 selected="selected"：  
 设置selected="selected"属性，则该选项就被默认选中。  
 
-（5）下拉列表多选    
+### （5）下拉列表多选    
 `<select multiple="multiple">`  
 
-（6）提交按钮    
+### （6）提交按钮    
 `<input   type="submit"   value="提交">`  
 
 type：只有当type值设置为submit时，按钮才有提交作用  
 value：按钮上显示的文字  
 
-（7）重置按钮    
+### （7）重置按钮    
 `<input type="reset" value="重置">`  
 
-（8）label标签    
+### （8）label标签    
 `<label for="控件id名称">控件</label>`  
 点击文本时对应的控件被选中  
