@@ -1,4 +1,4 @@
-# html学习笔记
+# html笔记
 * 【基本结构】  
 ```
 <html>   
@@ -57,7 +57,7 @@
 
 * 【列表】  
 
-  【ul 无序列表】 
+（1）ul 无序列表   
 ```
 <ul>  
   <li>信息</li>  
@@ -65,13 +65,14 @@
    ......  
 </ul>  
 ```
+效果  
 <ul>    
   <li>信息</li>    
   <li>信息</li>    
    ......    
 </ul>    
 
-  【ol 有序列表】  
+（2）ol 有序列表    
   ```
 <ol>    
    <li>信息</li>   
@@ -79,6 +80,7 @@
    ......  
 </ol>  
 ```
+效果  
 <ol>    
    <li>信息</li>   
    <li>信息</li>    
@@ -153,10 +155,10 @@
   </tbody>
 </table>
 
-【摘要】  
+（1）摘要    
 `<table summary="表格简介文本">` 浏览器中不显示  
 
-【标题】  
+（2）标题    
 ```
 <table>
     <caption>标题文本</caption>
@@ -185,9 +187,9 @@
 
 `<form> `：`<form>`标签是成对出现的，以`<form>`开始，以`</form>`结束。  
 action ：浏览者输入的数据被传送到的地方,比如一个PHP页面(save.php)。  
-method ： 数据传送的方式（get/post）  
+method ： 数据传送的方式（get/post)，get在网址后方显示提交内容，post不显示  
 
-【文本/密码输入框】  
+（1）文本/密码输入框    
 ```
 <form>
    <input type="text/password" name="名称" value="文本" />
@@ -204,7 +206,7 @@ method ： 数据传送的方式（get/post）
 </form>
 ```
 
-【文本域】  
+（2）文本域    
 `<textarea  rows="行数" cols="列数">文本</textarea>`  
 
 ```
@@ -214,7 +216,7 @@ method ： 数据传送的方式（get/post）
 </form>
 ```
 
-【单选框/复选框】  
+（3）单选框/复选框    
 `<input   type="radio/checkbox"   value="值"    name="名称"   checked="checked"/>`
 
 type:  
@@ -225,7 +227,7 @@ name：为控件命名，以备后台程序 ASP、PHP 使用
 checked：当设置 checked="checked" 时，该选项被默认选中  
  *注意！同一组的单选按钮，name 取值一定要一致  
 
-【下拉列表】  
+（4）下拉列表    
 ```
 <form action="save.php" method="post" >
     <label>爱好:</label>
@@ -241,18 +243,18 @@ checked：当设置 checked="checked" 时，该选项被默认选中
 selected="selected"：  
 设置selected="selected"属性，则该选项就被默认选中。  
 
-【下拉列表多选】  
+（5）下拉列表多选    
 `<select multiple="multiple">`  
 
-【提交按钮】  
+（6）提交按钮    
 `<input   type="submit"   value="提交">`  
 
 type：只有当type值设置为submit时，按钮才有提交作用  
 value：按钮上显示的文字  
 
-【重置按钮】  
+（7）重置按钮    
 `<input type="reset" value="重置">`  
 
-【label标签】  
+（8）label标签    
 `<label for="控件id名称">控件</label>`  
 点击文本时对应的控件被选中  
